@@ -31,3 +31,23 @@ build/
 
 ### VS Code ###
 .vscode/
+
+# Ignore bundler config.
+/employee-tracker/.bundle
+
+# Ignore all logfiles and tempfiles.
+/employee-tracker/log/*
+/employee-tracker/tmp/*
+!/employee-tracker/log/.keep
+!/employee-tracker/tmp/.keep
+
+# Ignore pidfiles, but keep the directory.
+/employee-tracker/tmp/pids/*
+!/employee-tracker/tmp/pids/
+!/employee-tracker/tmp/pids/.keep
+
+
+/employee-tracker/public/assets
+
+# Ignore master key for decrypting credentials and more.
+/employee-tracker/config/master.key
