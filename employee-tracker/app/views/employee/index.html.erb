@@ -1,13 +1,27 @@
 <div class="container">
   <div class="row mt-5">
-    <div class="col-lg-6">
       <h4>Employees information</h4>
-      <dl>
-        <% @employees['_embedded']['employeeList'].each do |employee| %>
-          <dt><%= employee['name'] %></dt>
-          <dt><%= employee['role'] %></dt>
-        <% end %>
-      </dl>
-    </div>
+      <table class="table table-striped table-bordered" style="width:100%">
+        <thead>
+            <tr>
+                <th> First Name </th>
+                <th> Last Name </th>
+                <th> Role </th>
+                <th> Salary </th>
+                <th> Address </th>
+            </tr>
+        </thead>
+        <tbody>
+            <% @employees['_embedded']['employeeList'].each do |employee| %>
+                <tr>
+                    <td><%= employee['firstName'] %></td>
+                    <td><%= employee['lastName'] %></td>
+                    <td><%= employee['role'] %></td>
+                    <td><%= employee['salary'] %></td>
+                    <td><%= employee['address'] %></td>
+                </tr>
+            <% end %>
+        </tbody>
+      </table>
   </div>
 </div>
